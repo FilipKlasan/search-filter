@@ -1,0 +1,184 @@
+#sidenavContainer {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#sidenav {
+    width: 20%;
+}
+
+.sidenavButton {
+    width: 100%;
+    outline: none;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.sidenavButtonName {
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(15, 9, 27);
+}
+
+#toggleButton {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    outline: none;
+    background-color: rgb(96, 63, 177);
+    color: rgb(15, 9, 27);
+}
+
+#searchSection {
+    display: inline-block;
+    margin-top: 200px;
+    margin-left: calc(50% - 185px);
+    z-index: 100;
+    overflow: visible;
+}
+
+.inputSearch, .inputSearch1 {
+    display: inline-block; 
+    width: 370px; 
+    margin: auto;
+    padding: 21px; 
+    border: 1px solid rgb(220, 220, 220); 
+    border-radius: 5px;
+    text-align: left;
+    color: rgb(144, 144, 144);
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.inputSearch:hover {
+    box-shadow: 2px 2px 12px rgb(220, 220, 220);
+    border: 1px solid rgb(204, 204, 204); 
+}
+
+#divSearch {
+    display: inline-block;
+    width: 370px;
+    margin: auto;
+    max-height: 197px;
+    overflow: scroll;
+    background-color: white;
+    text-align: left;
+    border: 1px solid rgb(220, 220, 220); 
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: none;
+    box-shadow: 2px 2px 12px rgb(200, 200, 200);
+}
+
+#search {
+    display: block;
+    width: auto;
+    text-decoration: none;
+    color: rgb(84, 84, 84);
+    padding: 21px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#search:hover {
+    background-color:rgb(243, 243, 243); 
+    cursor: pointer;
+}
+
+#divSearch::-webkit-scrollbar {
+    background-color:rgb(243, 243, 243); 
+    width: 7px;
+}
+
+#divSearch::-webkit-scrollbar:horizontal {
+    height: 7px;
+}
+
+#divSearch::-webkit-scrollbar-thumb {
+    background: rgb(193, 193, 193);
+    border-radius: 20px;
+}
+
+#divSearch::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+
+@media (max-width: 960px) {
+
+    #sidenav {
+       width: 28%; 
+    }
+
+    #toggleButton {
+       top: 15px;
+       left: 15px;
+    }
+
+}
+
+@media(max-width: 800px) {
+
+    #sidenavContainer {
+       top: 56px;
+    }
+
+    #sidenav {
+       width: 23%; 
+    }
+
+    .sidenavButton {
+       text-align: center;
+    }
+    
+    .sidenavButtonName {
+       display: none;
+    }
+
+    #toggleButton {
+       top: 15px;
+       left: 15px;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    #searchSection {
+       margin-left: calc(50% - 160px);
+    }
+ 
+    .inputSearch, .inputSearch1, #divSearch {
+       width: 320px;
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    #searchSection {
+       margin-left: calc(50% - 135px);
+    }
+
+    .inputSearch, .inputSearch1, #divSearch {
+       width: 270px;
+    }
+
+}
+
+@media(max-width: 390px) {
+
+    #searchSection {
+       margin-left: calc(50% - 120px);
+    }
+
+    .inputSearch, .inputSearch1, #divSearch {
+       width: 240px;
+    }
+
+}

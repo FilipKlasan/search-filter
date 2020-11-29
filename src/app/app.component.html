@@ -1,0 +1,34 @@
+<mat-toolbar id="nb">
+   <button mat-icon-button id="menu" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+   </button>
+   <mat-menu #menu> 
+      <button mat-menu-item routerLink="/" class="menuButton">
+         <mat-icon>home</mat-icon>
+      </button>
+      <button mat-menu-item class="menuButton">
+         Button 1
+      </button>
+      <button mat-menu-item class="menuButton">
+         Button 2
+      </button>
+      <button mat-menu-item class="menuButton">
+        Button 3
+      </button>
+      <button mat-menu-item class="menuButton">
+         Button 4
+      </button>
+   </mat-menu>
+   <div id="cnt">
+      <div id="left">
+         <button mat-button routerLink="/" class="buttonsN"><mat-icon>home</mat-icon></button>
+         <button mat-button class="buttonsN">Button 1</button>
+         <button mat-button class="buttonsN">Button 2</button>
+      </div>
+      <div id="right">
+         <button mat-raised-button class="buttonsN" style="background-color: rgb(80, 53, 150);">Button 3</button>
+         <button mat-button class="buttonsN">Button 4</button>
+      </div>
+   </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

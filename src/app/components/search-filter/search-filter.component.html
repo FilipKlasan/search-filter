@@ -1,0 +1,40 @@
+ <mat-sidenav-container id="sidenavContainer">
+  <mat-sidenav #sidenav mode="side" id="sidenav" opened>
+    <button mat-button class="sidenavButton">
+      <mat-icon class="sidenavIcon">sd_card</mat-icon>
+      <span class="sidenavButtonName">Sidenav button 1</span>
+    </button>
+    <button mat-button class="sidenavButton">
+      <mat-icon class="sidenavIcon">build</mat-icon>
+      <span class="sidenavButtonName">Sidenav button 2</span>
+    </button>    
+    <button mat-button class="sidenavButton">
+      <mat-icon class="sidenavIcon">euro_symbol</mat-icon>
+      <span class="sidenavButtonName">Sidenav button 3</span>
+    </button>    
+    <button mat-button mat-button class="sidenavButton">
+      <mat-icon class="sidenavIcon">addchart</mat-icon>
+      <span class="sidenavButtonName">Sidenav button 4</span>
+    </button>    
+    <button mat-button class="sidenavButton">
+      <mat-icon class="sidenavIcon">settings_input_hdmi</mat-icon>
+      <span class="sidenavButtonName">Sidenav button 5</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-icon-button id="toggleButton" (click)="sidenav.toggle()"><mat-icon>sync_alt</mat-icon></button>
+    <div id="searchSection">
+      <div>
+        <input placeholder="Find a website" matInput [(ngModel)]="incl" #input 
+          (input)="searchWebsite(input)" [ngClass]="linkCounter > 0 ? 'inputSearch1': 'inputSearch'" 
+          maxlength="63">
+      </div>
+      <div id="divSearch" *ngIf="show">
+        <div *ngFor="let el of visibleWebsites">
+          <span (click)="nav(el.URL)" id="search">{{el.name}}</span>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+ </mat-sidenav-container>
+ <router-outlet></router-outlet>

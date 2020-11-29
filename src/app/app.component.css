@@ -1,0 +1,53 @@
+#nb {
+  background-color: rgb(96, 63, 177);
+}
+
+#cnt {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+#left {
+  text-align: left;
+}
+
+#right {
+  text-align: right;
+  padding-right: 5px;
+}
+
+#menu {
+  display: none;
+}
+
+.menuButton {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(15, 9, 27);
+  outline: none;
+}
+
+.buttonsN {
+  outline: none;
+  font-size: 14px;
+}
+
+@media(max-width: 800px) {
+
+  #cnt {
+    display: none;
+  }
+
+  #left, #right {
+    display: none;
+  }
+
+  #menu {
+    display: inline-block;
+    margin-top: 1px;
+    outline: none;
+    color: rgb(15, 9, 27);
+  }
+  
+}
